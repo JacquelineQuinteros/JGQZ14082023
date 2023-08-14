@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="UbicaMovil">
-            <file>file:/C:/Users/Gisela/Documents/NetBeansProjects/JGQZ14082023.AppWeb/src/java/jgqz/appweb/TareaServlet.java</file>
+            <file>file:/D:/PRUEBA/JGQZ14082023.AppWeb/web/Views/Shared/Title.jsp</file>
+            <file>file:/D:/PRUEBA/JGQZ14082023.AppWeb/web/Views/Tarea/edit.jsp</file>
+            <file>file:/D:/PRUEBA/JGQZ14082023.AppWeb/web/Views/Tarea/details.jsp</file>
+            <file>file:/D:/PRUEBA/JGQZ14082023.AppWeb/web/Views/Tarea/index.jsp</file>
+            <file>file:/D:/PRUEBA/JGQZ14082023.AppWeb/web/Views/Tarea/create.jsp</file>
+            <file>file:/D:/PRUEBA/JGQZ14082023.AppWeb/web/Views/Tarea/delete.jsp</file>
         </group>
     </open-files>
 </project-private>
