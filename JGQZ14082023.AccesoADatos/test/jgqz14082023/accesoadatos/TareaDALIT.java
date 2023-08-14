@@ -78,70 +78,48 @@ public class TareaDALIT {
      * Test of delete method, of class TareaDAL.
      */
     @Test
-    public void testDelete() throws Exception {
+    public void test7Delete() throws Exception {
         System.out.println("delete");
-        Tarea pTask = null;
         int expResult = 0;
-        int result = TareaDAL.delete(pTask);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of asignarDatosResultSet method, of class TareaDAL.
-     */
-    @Test
-    public void testAsignarDatosResultSet() throws Exception {
-        System.out.println("asignarDatosResultSet");
-        Tarea pTask = null;
-        ResultSet pResultSet = null;
-        int pIndex = 0;
-        int expResult = 0;
-        int result = TareaDAL.asignarDatosResultSet(pTask, pResultSet, pIndex);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int result = TareaDAL.delete(taskActual);
+        assertNotEquals(expResult, result);
+        Tarea taskDelete = TareaDAL.getById(taskActual);
+        assertTrue(taskDelete.getId() == 0);
     }
 
     /**
      * Test of getById method, of class TareaDAL.
      */
     @Test
-    public void testGetById() throws Exception {
+    public void test4GetById() throws Exception {
         System.out.println("getById");
-        Tarea pTask = null;
-        Tarea expResult = null;
-        Tarea result = TareaDAL.getById(pTask);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Tarea result = TareaDAL.getById(taskActual);
+        assertEquals(taskActual.getId(), result.getId());
     }
 
     /**
      * Test of getAll method, of class TareaDAL.
      */
     @Test
-    public void testGetAll() throws Exception {
+    public void test6GetAll() throws Exception {
         System.out.println("getAll");
-        ArrayList<Tarea> expResult = null;
         ArrayList<Tarea> result = TareaDAL.getAll();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertTrue(result.size() > 0);
     }
 
     /**
      * Test of querySelect method, of class TareaDAL.
      */
     @Test
-    public void testQuerySelect() throws Exception {
+    public void test2QuerySelect() throws Exception {
         System.out.println("querySelect");
-        Tarea pDoc = null;
-        ComunDB.UtilQuery pUtilQuery = null;
-        TareaDAL.querySelect(pDoc, pUtilQuery);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Tarea pTask = new Tarea();
+        pTask.setId(1);
+        assertTrue(testIndividualQuerySelect(pTask) == 1);
+        pTask.setTitulo("TEST");
+        assertTrue(testIndividualQuerySelect(pTask) == 2);
+        pTask.setDescripcion("TEST");
+        assertTrue(testIndividualQuerySelect(pTask) == 3);
     }
 
     /**
@@ -150,12 +128,10 @@ public class TareaDALIT {
     @Test
     public void testSearch() throws Exception {
         System.out.println("Search");
-        Tarea pTask = null;
-        ArrayList<Tarea> expResult = null;
+        Tarea pTask = new Tarea(0, "Test","Test");
         ArrayList<Tarea> result = TareaDAL.Search(pTask);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertTrue(result.size() > 0);
+        taskActual = result.get(0);
     }
     
 }
