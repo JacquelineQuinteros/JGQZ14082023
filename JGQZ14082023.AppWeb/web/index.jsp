@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <jsp:include page="/Views/Shared/title.jsp" />
+        <jsp:include page="/Views/Shared/Title.jsp" />
         <title>Gisela - Tareas</title>
     </head>
     <body>
