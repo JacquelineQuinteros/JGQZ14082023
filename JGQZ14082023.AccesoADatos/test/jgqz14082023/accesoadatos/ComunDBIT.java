@@ -102,11 +102,11 @@ public class ComunDBIT {
     @Test
     public void testEjecutarSQL() throws Exception {
         System.out.println("ejecutarSQL");
-        String pSql = "INSERT INTO Tareas(Titulo, Descripcion) VALUES('TEST', 'TEST X') ";
+        String pSql = "INSERT INTO Tareas(Titulo, Descripcion) VALUES('TEST', 'Testx');";
         int expResult = 0;
         int result = ComunDB.ejecutarSQL(pSql);
         assertNotEquals(expResult, result);
-        String pSql2 = "DELETE FROM Tareas WHERE Titulo='TEST', Descripcion='TEST X'";
+        String pSql2 = "DELETE FROM Tareas WHERE Titulo='TEST'";
         int expResult2 = 0;
         int result2 = ComunDB.ejecutarSQL(pSql2);
         assertNotEquals(expResult2, result2);

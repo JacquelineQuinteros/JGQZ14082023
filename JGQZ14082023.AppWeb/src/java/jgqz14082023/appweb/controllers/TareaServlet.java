@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
-package jgqz.appweb;
+package jgqz14082023.appweb.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,11 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Gisela
- */
-@WebServlet(name = "TareaServlet", urlPatterns = {"/TareaServlet"})
+@WebServlet(urlPatterns = {"/TareaServlet"})
 public class TareaServlet extends HttpServlet {
 
     /**
